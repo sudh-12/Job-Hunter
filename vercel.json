@@ -8,7 +8,7 @@
    }
     },
     {
-        "src":"server/server.js",
+        "src":"server/package.json",
          "use": "@vercel/node" }
   ],
   "routes": [
@@ -16,6 +16,8 @@
         "src": "/api/(.*)",
          "dest": "/server/server.js" 
     },
-    { "src": "/(.*)", "dest": "/client/build/$1" }
+    { "src": "/(.*)",
+     "dest": "/client/build/$1"
+     }
   ]
 }
